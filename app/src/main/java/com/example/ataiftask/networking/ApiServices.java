@@ -1,13 +1,12 @@
 package com.example.ataiftask.networking;
 
-import com.example.ataiftask.models.ProductModel;
+import com.example.ataiftask.models.PokemonRespons;
 
-import java.util.List;
-
+import io.reactivex.rxjava3.core.Observable;
 import retrofit2.Call;
 import retrofit2.http.GET;
 
 public interface ApiServices {
-    @GET("")
-    Call<List<ProductModel>> getData();
+    @GET("pokemon")
+    Observable<PokemonRespons> getPokemons();
 }
